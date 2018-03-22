@@ -1,3 +1,5 @@
+import { Link } from 'react-router';
+
 var React = require('react');
 var PropTypes = require('prop-types');
 
@@ -8,7 +10,7 @@ class WeatherForm extends React.Component {
         <input type='text' />
         <button>Get Weather</button>
       </div>
-    );
+    )
   }
 }
 
@@ -16,4 +18,4 @@ WeatherForm.propTypes = {
   styleClass: PropTypes.string.isRequired,
 }
 
-module.exports = WeatherForm;
+module.exports = WeatherForm

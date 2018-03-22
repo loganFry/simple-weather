@@ -1,5 +1,5 @@
 var React = require('react');
-var api = require('../util/Api');
+var api = require('../util/api');
 
 class ExtendedForecast extends React.Component {
     constructor(props){
@@ -11,7 +11,7 @@ class ExtendedForecast extends React.Component {
     }
 
     render() {
-        
+        return <p>Hello from extended forecast</p>;
     }
 }
 
