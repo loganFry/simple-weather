@@ -12,6 +12,4 @@ class Nav extends React.Component {
   }
 }
 
-
-
 module.exports = Nav;
