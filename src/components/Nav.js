@@ -6,7 +6,7 @@ class Nav extends React.Component {
       return (
         <div className='nav'>
             <h1>Simple Weather</h1>
-            <WeatherForm direction='row'/>
+            <WeatherForm styleClass='horizontal-weather'/>
         </div>
       );
   }

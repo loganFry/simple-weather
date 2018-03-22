@@ -7,10 +7,8 @@ class App extends Component {
   render() {
     return (
       <div>
-        <Nav /> 
-        <div style={{margin: 'auto', width: '300px'}}>               
-          <WeatherForm />
-        </div>
+        <Nav />    
+        <WeatherForm styleClass='vertical-weather'/>
       </div>
     )
   }
