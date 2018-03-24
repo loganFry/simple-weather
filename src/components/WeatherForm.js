@@ -1,5 +1,4 @@
-import { Link } from 'react-router';
-
+var Link = require('react-router').Link;
 var React = require('react');
 var PropTypes = require('prop-types');
 
