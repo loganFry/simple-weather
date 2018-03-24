@@ -44,7 +44,7 @@ class WeatherForm extends React.Component {
           className='form-control'
           value={this.state.text} 
           onChange={this.handleChange}
-          placeholder='Enter city, country'/>
+          placeholder='Ex. Los Angeles, USA'/>
         <Link 
           to={'/forecast?city=' + this.state.city + '&country=' + this.state.country}
           className='button button-success'>
