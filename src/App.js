@@ -10,13 +10,15 @@ var ExtendedForecast = require('./components/ExtendedForecast');
 class App extends Component {
   render() {
     return (
-      <div>
-        <Nav />
+      <div>        
         <BrowserRouter>
-          <Switch>
-            <Route exact path='/' component={Home} />
-            <Route path='/forecast' component={ExtendedForecast} />
-          </Switch>
+          <div>
+            <Nav />
+            <Switch>
+              <Route exact path='/' component={Home} />
+              <Route path='/forecast' component={ExtendedForecast} />
+            </Switch>
+          </div>
         </BrowserRouter>
       </div>
     )

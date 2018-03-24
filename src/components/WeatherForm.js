@@ -1,4 +1,4 @@
-var Link = require('react-router').Link;
+var Link = require('react-router-dom').Link;
 var React = require('react');
 var PropTypes = require('prop-types');
 
@@ -44,7 +44,9 @@ class WeatherForm extends React.Component {
           value={this.state.text} 
           onChange={this.handleChange}
           placeholder='Enter city, country'/>
-        <button>Get Weather</button>
+        <Link to={'/forecast?city=' + this.state.city + '&country=' + this.state.country}>
+          Get Weather
+        </Link>
       </div>
     )
   }
