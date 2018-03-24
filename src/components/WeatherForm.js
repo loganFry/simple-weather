@@ -38,13 +38,16 @@ class WeatherForm extends React.Component {
 
   render(){
     return (
-      <div className={this.props.styleClass}>
+      <div style={{flexDirection: this.props.direction}} className='weather-container'>
         <input 
           type='text' 
+          className='form-control'
           value={this.state.text} 
           onChange={this.handleChange}
           placeholder='Enter city, country'/>
-        <Link to={'/forecast?city=' + this.state.city + '&country=' + this.state.country}>
+        <Link 
+          to={'/forecast?city=' + this.state.city + '&country=' + this.state.country}
+          className='button button-success'>
           Get Weather
         </Link>
       </div>
@@ -53,7 +56,7 @@ class WeatherForm extends React.Component {
 }
 
 WeatherForm.propTypes = {
-  styleClass: PropTypes.string.isRequired,
+  direction: PropTypes.string.isRequired,
 }
 
 module.exports = WeatherForm;

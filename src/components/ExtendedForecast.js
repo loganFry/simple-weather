@@ -1,5 +1,4 @@
 var React = require('react');
-var api = require('../util/api');
 
 class ExtendedForecast extends React.Component {
     constructor(props){

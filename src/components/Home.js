@@ -4,8 +4,8 @@ var WeatherForm = require('./WeatherForm')
 class Home extends React.Component {
     render(){
         return (
-            <div>
-                <WeatherForm styleClass='vertical-weather' />
+            <div className='home-container'>
+                <WeatherForm direction='column' />
             </div>
         )
     }
