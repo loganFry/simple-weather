@@ -1,6 +1,7 @@
 var React = require('react');
 var QueryString = require('query-string');
 var api = require('../util/api');
+var DaySummary = require('./DaySummary');
 
 class ExtendedForecast extends React.Component {
     constructor(props){
@@ -28,12 +29,18 @@ class ExtendedForecast extends React.Component {
         return (
             <div className='container'>
                 {this.state.weather ? 
-                    <div className='home-container'>
+                    (<div className='home-container'>
                         <h2 className='header'>
                             Weather for {this.state.weather.city}, {this.state.weather.country}
                         </h2>
-                        {this.state.weather.days.map(day => <p key={day.date}>temp: {day.temp}</p>)}
-                    </div>
+                        <div className='card-container'>
+                            {this.state.weather.days.map(function(day){
+                                return (
+                                    <DaySummary key={day.date} temp={day.temp} />
+                                )
+                            })}
+                        </div>
+                    </div>)
                     : <p>Loading</p>}
             </div>
         )

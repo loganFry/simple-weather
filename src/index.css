@@ -92,3 +92,18 @@ body {
   background-color: #5cb85c;
   border-color: #4cae4c;
 }
+
+.card-container{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.card {
+  width: 300px;
+  background-color: white;
+  color: #5c6677;
+  border-radius: 8px;
+  margin: 20px;
+  padding: 10px;
+}
