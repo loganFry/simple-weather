@@ -7,7 +7,7 @@ class ExtendedForecast extends React.Component {
         super(props);
 
         this.state = {
-            response: null,
+            weather: null,
         }
     }
 
@@ -15,10 +15,11 @@ class ExtendedForecast extends React.Component {
         var params = QueryString.parse(this.props.location.search);
         var city = params.city;
         var country = params.country;
-        api.Get5DayForecast(city, country)
+        api.GetFormattedWeatherData(city, country)
             .then(function(data){
+                console.log(data);
                 return this.setState({
-                    response: data,
+                    weather: data,
                 })
             }.bind(this))
     }
@@ -26,8 +27,13 @@ class ExtendedForecast extends React.Component {
     render() {
         return (
             <div className='container'>
-                {this.state.response ? 
-                    <p>{JSON.stringify(this.state.response)}</p> 
+                {this.state.weather ? 
+                    <div className='home-container'>
+                        <h2 className='header'>
+                            Weather for {this.state.weather.city}, {this.state.weather.country}
+                        </h2>
+                        {this.state.weather.days.map(day => <p key={day.date}>temp: {day.temp}</p>)}
+                    </div>
                     : <p>Loading</p>}
             </div>
         )
