@@ -36,7 +36,11 @@ class ExtendedForecast extends React.Component {
                         <div className='card-container'>
                             {this.state.weather.days.map(function(day){
                                 return (
-                                    <DaySummary key={day.date} temp={day.temp} />
+                                    <DaySummary 
+                                    key={day.date} 
+                                    temp={day.temp}
+                                    icon={day.icon}
+                                    weatherDate={day.date} />
                                 )
                             })}
                         </div>
