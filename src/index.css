@@ -100,7 +100,7 @@ body {
 }
 
 .card {
-  width: 300px;
+  width: 250px;
   background-color: white;
   color: #5c6677;
   border-radius: 8px;
@@ -111,6 +111,12 @@ body {
 }
 
 .weather-icon {
-  width: 200px;
-  height: 200px;
+  width: 90%;
+}
+
+.temp-summary{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-evenly;
 }

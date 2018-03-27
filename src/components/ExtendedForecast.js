@@ -38,7 +38,8 @@ class ExtendedForecast extends React.Component {
                                 return (
                                     <DaySummary 
                                     key={day.date} 
-                                    temp={day.temp}
+                                    low={day.minTemp}
+                                    high={day.maxTemp}
                                     icon={day.icon}
                                     weatherDate={day.date} />
                                 )
