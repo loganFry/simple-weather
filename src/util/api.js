@@ -23,7 +23,6 @@ function Get5DayForecast(city, country){
 
     return axios.get(encodedUrl)
         .then(function(response){
-            console.log(response.data)
             return response.data;
         })
 }

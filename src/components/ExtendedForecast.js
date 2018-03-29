@@ -18,7 +18,6 @@ class ExtendedForecast extends React.Component {
         var country = params.country;
         api.GetFormattedWeatherData(city, country)
             .then(function(data){
-                console.log(data);
                 return this.setState({
                     weather: data,
                 })
@@ -40,8 +39,11 @@ class ExtendedForecast extends React.Component {
                                     key={day.date} 
                                     low={day.minTemp}
                                     high={day.maxTemp}
+                                    temp={day.temp}
                                     icon={day.icon}
-                                    weatherDate={day.date} />
+                                    weatherDate={day.date}
+                                    description={day.description}
+                                    humidity={day.humidity} />
                                 )
                             })}
                         </div>

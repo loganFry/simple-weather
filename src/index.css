@@ -98,10 +98,12 @@ body {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
+  align-items: flex-start;
 }
 
 .card {
   width: 250px;
+  height: 400px;
   background-color: white;
   color: #5c6677;
   border-radius: 8px;
@@ -109,6 +111,11 @@ body {
   padding: 10px;
   font-size: 20px;
   text-align: center;
+
+  /* card shadow effect*/
+  box-shadow: 
+    0 4px 8px 0 rgba(0, 0, 0, 0.2), 
+    0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 .weather-icon {
