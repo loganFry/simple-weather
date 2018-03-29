@@ -129,3 +129,20 @@ body {
   flex-wrap: nowrap;
   justify-content: space-evenly;
 }
+
+
+
+/* entire container, keeps perspective */
+.flip-container {
+	perspective: 1000px;
+}
+	/* flip the pane when hovered */
+	.flip-container:hover .flipper, .flip-container.hover .flipper {
+		transform: rotateY(180deg);
+	}
+
+.flip-container, .front, .back {
+  width: 250px;
+  height: 400px;
+}
+
