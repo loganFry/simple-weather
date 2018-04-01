@@ -10,10 +10,20 @@ class ExtendedForecast extends React.Component {
         this.state = {
             weather: null,
         }
+
+        this.getWeatherData = this.getWeatherData.bind(this);
     }
 
     componentDidMount(){
-        var params = QueryString.parse(this.props.location.search);
+        this.getWeatherData(this.props.location.search)
+    }
+
+    componentWillReceiveProps(nextProps){
+        this.getWeatherData(nextProps.location.search)
+    }
+
+    getWeatherData(query){
+        var params = QueryString.parse(query);
         var city = params.city;
         var country = params.country;
         api.GetFormattedWeatherData(city, country)
