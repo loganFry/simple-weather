@@ -1,7 +1,7 @@
 var React = require('react');
 var QueryString = require('query-string');
 var api = require('../util/api');
-var DaySummary = require('./DaySummary');
+var WeatherCard = require('./WeatherCard');
 
 class ExtendedForecast extends React.Component {
     constructor(props){
@@ -45,15 +45,16 @@ class ExtendedForecast extends React.Component {
                         <div className='card-container'>
                             {this.state.weather.days.map(function(day){
                                 return (
-                                    <DaySummary 
-                                    key={day.date} 
-                                    low={day.minTemp}
-                                    high={day.maxTemp}
-                                    temp={day.temp}
-                                    icon={day.icon}
-                                    weatherDate={day.date}
-                                    description={day.description}
-                                    humidity={day.humidity} />
+                                    <WeatherCard 
+                                        key={day.date} 
+                                        low={day.minTemp}
+                                        high={day.maxTemp}
+                                        temp={day.temp}
+                                        icon={day.icon}
+                                        weatherDate={day.date}
+                                        description={day.description}
+                                        humidity={day.humidity} 
+                                    />
                                 )
                             })}
                         </div>
