@@ -28,13 +28,19 @@ body {
 
 .nav {
   display: flex;
-  flex-direction: row;
   justify-content: space-between;
   background: rgba(252, 90, 44, 0.89);
   color: white;
   align-items: center;
   padding: 10px;
-  height: 100px;
+}
+
+.nav-horizontal {
+  flex-direction: row;
+}
+
+.nav-vertical {
+  flex-direction: column;
 }
 
 .header {
@@ -123,7 +129,7 @@ body {
   height: 200px;
 }
 
-.temp-summary{
+.temp-summary {
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
